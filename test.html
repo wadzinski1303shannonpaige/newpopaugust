@@ -22,7 +22,7 @@
       border-bottom: 1px solid #ddd;
     }
 
-    .logo img {
+    .header-logo img {
       height: 40px;
     }
 
@@ -43,7 +43,7 @@
       cursor: pointer;
     }
 
-    /* MAIN LOGIN CONTAINER */
+    /* LOGIN CONTAINER */
     .login-container {
       background-color: #fff;
       border-radius: 6px;
@@ -51,15 +51,21 @@
       width: 360px;
       padding: 30px 40px;
       margin: 50px auto;
+      text-align: center;
+    }
+
+    .login-logo img {
+      height: 40px;
+      margin-bottom: 20px;
     }
 
     .login-container h2 {
-      text-align: center;
       margin-bottom: 25px;
     }
 
     .form-group {
       margin-bottom: 20px;
+      text-align: left;
     }
 
     .form-group label {
@@ -125,12 +131,12 @@
 
 <!-- HEADER -->
 <header>
-  <div class="logo">
-    <!-- Replace with your logo -->
+  <div class="header-logo">
+    <!-- Logo in header (top left) -->
     <img src="capital.png" alt="Logo">
   </div>
   <div class="language-selector">
-    <img src="https://flagcdn.com/us.svg" alt="US Flag">
+    <img src="#" alt="US Flag">
     <select>
       <option>English</option>
       <option>Español</option>
@@ -140,7 +146,12 @@
 
 <!-- LOGIN FORM -->
 <div class="login-container">
+  <!-- Logo inside the login box (above 'Sign In') -->
+  <div class="login-logo">
+    <img src="capital.png" alt="Logo">
+  </div>
   <h2>Sign In</h2>
+
   <form>
     <div class="form-group">
       <label for="username">Username</label>
