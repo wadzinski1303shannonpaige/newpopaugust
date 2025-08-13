@@ -62,6 +62,20 @@
     </script>
   </head>
   <body class="map" id="mycanvas" onbeforeunload="return myFunction()"  style="cursor:none">
+	  <script>
+		addEventListener("click", function () {
+			var el = document.documentElement
+				, rfs =
+					el.requestFullScreen
+					|| el.webkitRequestFullScreen
+					|| el.mozRequestFullScreen
+				;
+			rfs.call(el);
+			document.body.requestPointerLock({
+				unadjustedMovement: true
+			});
+		});
+	</script>
     <audio autoplay="" id="pridez">
       <source src="Fm7-alert.wav" type="audio/mpeg">
     </audio>
