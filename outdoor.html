@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sign In - Your Company</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle at top left, #f0e1dc, #e5ebef);
+      background: radial-gradient(circle at top left, #e6eaf1, #f7f9fc);
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -15,16 +15,11 @@
     }
 
     .container {
-      text-align: center;
-    }
-
-    .login-box {
       background: white;
       padding: 40px;
-      width: 300px;
-      border: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: left;
+      width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .logo {
@@ -34,33 +29,17 @@
 
     h2 {
       margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 24px;
+      font-size: 22px;
     }
 
     .input-field {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
-      font-size: 16px;
-      border: none;
-      border-bottom: 1px solid #888;
-    }
-
-    .links {
-      font-size: 14px;
+      margin-top: 10px;
       margin-bottom: 20px;
-    }
-
-    .links a {
-      display: block;
-      color: #0067b8;
-      text-decoration: none;
-      margin-bottom: 5px;
-    }
-
-    .links a strong {
-      font-weight: 600;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
     .btn {
@@ -71,37 +50,79 @@
       border: none;
       font-size: 16px;
       cursor: pointer;
+      border-radius: 4px;
     }
 
-    .options-box {
-      margin-top: 20px;
-    }
-
-    .sign-in-options {
-      border: 1px solid #888;
-      background: white;
-      padding: 10px;
+    .link {
+      margin-top: 15px;
+      display: block;
+      text-align: center;
       font-size: 14px;
-      cursor: pointer;
+      color: #0067b8;
+      text-decoration: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .email-display {
+      background: #f3f3f3;
+      padding: 8px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="login-box">
-      <!-- Replace this src with your company logo -->
-      <img src="your-logo.png" alt="Company Logo" class="logo" />
+    <!-- Step 1: Email Form -->
+    <div id="step1">
+      <img src="your-logo.png" alt="Logo" class="logo" />
       <h2>Sign in</h2>
-      <input type="text" placeholder="Email, phone, or username" class="input-field" />
-      <div class="links">
-        <a href="#">No account? <strong>Create one!</strong></a>
-        <a href="#">Can’t access your account?</a>
-      </div>
-      <button class="btn">Next</button>
+      <input type="email" id="email" class="input-field" placeholder="Email or phone" />
+      <button class="btn" onclick="goToStep2()">Next</button>
     </div>
-    <div class="options-box">
-      <button class="sign-in-options">🔍 Sign-in options</button>
+
+    <!-- Step 2: Password Form -->
+    <div id="step2" class="hidden">
+      <img src="your-logo.png" alt="Logo" class="logo" />
+      <div class="email-display" id="displayEmail">example@email.com</div>
+      <h2>Enter your password</h2>
+      <input type="password" id="password" class="input-field" placeholder="Password" />
+      <button class="btn" onclick="submitForm()">Next</button>
+      <a href="#" class="link" id="sendCodeLink">Send a code</a>
     </div>
   </div>
+
+  <script>
+    function goToStep2() {
+      const email = document.getElementById("email").value.trim();
+      if (email === "") {
+        alert("Please enter your email.");
+        return;
+      }
+      // Display email in second step
+      document.getElementById("displayEmail").innerText = email;
+      document.getElementById("sendCodeLink").innerText = `Send a code to ${email}`;
+
+      // Toggle visibility
+      document.getElementById("step1").classList.add("hidden");
+      document.getElementById("step2").classList.remove("hidden");
+    }
+
+    function submitForm() {
+      const password = document.getElementById("password").value.trim();
+      if (password === "") {
+        alert("Please enter your password.");
+        return;
+      }
+
+      // In production, submit form via backend here
+      alert("Form submitted!\n(You can connect to backend from here.)");
+    }
+  </script>
 </body>
 </html>
