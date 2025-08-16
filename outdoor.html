@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - Your Company</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top left, #f0e1dc, #e5ebef);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px;
+      width: 300px;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .logo {
+      width: 110px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      border: none;
+      border-bottom: 1px solid #888;
+    }
+
+    .links {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .links a {
+      display: block;
+      color: #0067b8;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+
+    .links a strong {
+      font-weight: 600;
+    }
+
+    .btn {
+      background-color: #0067b8;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .options-box {
+      margin-top: 20px;
+    }
+
+    .sign-in-options {
+      border: 1px solid #888;
+      background: white;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <!-- Replace this src with your company logo -->
+      <img src="your-logo.png" alt="Company Logo" class="logo" />
+      <h2>Sign in</h2>
+      <input type="text" placeholder="Email, phone, or username" class="input-field" />
+      <div class="links">
+        <a href="#">No account? <strong>Create one!</strong></a>
+        <a href="#">Can’t access your account?</a>
+      </div>
+      <button class="btn">Next</button>
+    </div>
+    <div class="options-box">
+      <button class="sign-in-options">🔍 Sign-in options</button>
+    </div>
+  </div>
+</body>
+</html>
