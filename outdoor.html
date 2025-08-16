@@ -62,6 +62,11 @@
       text-decoration: none;
     }
 
+    /* Add spacing between links and next button */
+    .spacer {
+      margin-bottom: 20px;
+    }
+
     .hidden {
       display: none;
     }
@@ -87,6 +92,9 @@
       <!-- Links above the "Next" button -->
       <a href="#" class="link">No account? <strong>Create one!</strong></a>
       <a href="#" class="link">Can’t access your account?</a>
+
+      <!-- Spacer to add space between the links and button -->
+      <div class="spacer"></div>
 
       <button class="btn" onclick="goToStep2()">Next</button>
     </div>
