@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fullscreen Self-Hosted Video with Cookie Consent</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: black;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .cookie-popup {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      max-width: 90%;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .cookie-popup button {
+      margin-top: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Transparent overlay to freeze interaction and hide cursor */
+    #interactionBlocker {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: transparent;
+      cursor: none;
+      pointer-events: auto;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container" id="videoContainer">
+    <!-- Self-hosted video -->
+    <video id="selfHostedVideo" preload="auto" muted playsinline>
+      <source src="mine.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Cookie popup -->
+    <div class="cookie-popup" id="cookiePopup">
+      This website uses cookies to ensure you get the best experience.
+      <br>
+      <button onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <!-- Transparent overlay to block interaction -->
+    <div id="interactionBlocker"></div>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      // Hide cookie popup
+      document.getElementById('cookiePopup').classList.add('hidden');
+
+      // Play self-hosted video
+      const video = document.getElementById('selfHostedVideo');
+      if (video) {
+        video.play().catch((e) => console.warn('Video play failed:', e));
+      }
+
+      // Request fullscreen
+      const container = document.getElementById("videoContainer");
+      if (container.requestFullscreen) {
+        container.requestFullscreen();
+      } else if (container.webkitRequestFullscreen) {
+        container.webkitRequestFullscreen();
+      } else if (container.msRequestFullscreen) {
+        container.msRequestFullscreen();
+      }
+
+      // Show overlay to freeze interaction and hide cursor
+      document.getElementById('interactionBlocker').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
