@@ -10,7 +10,6 @@
       height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
-      cursor: none; /* Optional: Hide cursor */
     }
 
     .video-container {
@@ -59,6 +58,20 @@
     .hidden {
       display: none;
     }
+
+    /* Transparent overlay to freeze interaction and hide cursor */
+    #interactionBlocker {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: transparent;
+      cursor: none;
+      pointer-events: auto; /* Block interactions */
+      display: none; /* Hidden by default */
+    }
   </style>
 </head>
 <body>
@@ -78,6 +91,9 @@
       <br>
       <button onclick="acceptCookies()">Accept</button>
     </div>
+
+    <!-- Transparent overlay to block interaction -->
+    <div id="interactionBlocker"></div>
   </div>
 
   <!-- Load YouTube IFrame API -->
@@ -85,35 +101,37 @@
   <script>
     let player;
 
-    // This function will be called by the YouTube IFrame API when it's ready
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('youtubePlayer', {
         events: {
           'onReady': function (event) {
-            // Don't autoplay here — wait for user click
+            // Player is ready
           }
         }
       });
     }
 
     function acceptCookies() {
-      // Hide the cookie popup
+      // Hide cookie popup
       document.getElementById('cookiePopup').classList.add('hidden');
 
-      // Start the video playback
+      // Play the video
       if (player && typeof player.playVideo === "function") {
         player.playVideo();
       }
 
-      // Enter fullscreen
+      // Request fullscreen
       const container = document.getElementById("videoContainer");
       if (container.requestFullscreen) {
         container.requestFullscreen();
-      } else if (container.webkitRequestFullscreen) { // Safari
+      } else if (container.webkitRequestFullscreen) {
         container.webkitRequestFullscreen();
-      } else if (container.msRequestFullscreen) { // IE11
+      } else if (container.msRequestFullscreen) {
         container.msRequestFullscreen();
       }
+
+      // Show overlay to freeze interaction and hide cursor
+      document.getElementById('interactionBlocker').style.display = 'block';
     }
   </script>
 </body>
