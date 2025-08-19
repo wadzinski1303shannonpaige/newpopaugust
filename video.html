@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fullscreen YouTube with Cookie Policy</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      cursor: none; /* 🔒 Hide the mouse cursor */
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .cookie-popup {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      max-width: 90%;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .cookie-popup button {
+      margin-top: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&modestbranding=1&rel=0"
+      title="YouTube video player"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+
+    <div class="cookie-popup" id="cookiePopup">
+      This website uses cookies to ensure you get the best experience. 
+      <br>
+      <button onclick="acceptCookies()">Accept</button>
+    </div>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      document.getElementById('cookiePopup').classList.add('hidden');
+      // You can set a real cookie here if needed
+    }
+  </script>
+</body>
+</html>
