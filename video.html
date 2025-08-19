@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fullscreen YouTube with Cookie Policy</title>
+  <title>Fullscreen YouTube with Cookie Consent</title>
   <style>
     html, body {
       margin: 0;
@@ -10,13 +10,14 @@
       height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
-      cursor: none; /* 🔒 Hide the mouse cursor */
+      cursor: none; /* Optional: Hide cursor */
     }
 
     .video-container {
       position: relative;
       width: 100%;
       height: 100%;
+      background: black;
     }
 
     iframe {
@@ -26,6 +27,7 @@
       width: 100%;
       height: 100%;
       border: none;
+      z-index: 1;
     }
 
     .cookie-popup {
@@ -40,7 +42,7 @@
       font-size: 14px;
       max-width: 90%;
       text-align: center;
-      z-index: 10;
+      z-index: 2;
     }
 
     .cookie-popup button {
@@ -60,14 +62,17 @@
   </style>
 </head>
 <body>
-  <div class="video-container">
+  <div class="video-container" id="videoContainer">
+    <!-- Embedded YouTube player using the YouTube IFrame API -->
     <iframe
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&modestbranding=1&rel=0"
-      title="YouTube video player"
+      id="youtubePlayer"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&controls=1&rel=0&modestbranding=1"
+      title="YouTube video"
       allow="autoplay; encrypted-media"
       allowfullscreen>
     </iframe>
 
+    <!-- Cookie popup -->
     <div class="cookie-popup" id="cookiePopup">
       This website uses cookies to ensure you get the best experience. 
       <br>
@@ -75,10 +80,40 @@
     </div>
   </div>
 
+  <!-- Load YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script>
+    let player;
+
+    // This function will be called by the YouTube IFrame API when it's ready
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtubePlayer', {
+        events: {
+          'onReady': function (event) {
+            // Don't autoplay here — wait for user click
+          }
+        }
+      });
+    }
+
     function acceptCookies() {
+      // Hide the cookie popup
       document.getElementById('cookiePopup').classList.add('hidden');
-      // You can set a real cookie here if needed
+
+      // Start the video playback
+      if (player && typeof player.playVideo === "function") {
+        player.playVideo();
+      }
+
+      // Enter fullscreen
+      const container = document.getElementById("videoContainer");
+      if (container.requestFullscreen) {
+        container.requestFullscreen();
+      } else if (container.webkitRequestFullscreen) { // Safari
+        container.webkitRequestFullscreen();
+      } else if (container.msRequestFullscreen) { // IE11
+        container.msRequestFullscreen();
+      }
     }
   </script>
 </body>
