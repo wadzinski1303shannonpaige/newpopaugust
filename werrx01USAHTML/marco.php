@@ -3,7 +3,7 @@
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-	<script defer data-domain="account-1-billl.com/rc8REQ" src="https://api.publytics.net/js/script.manual.min.js"></script>
+	<script defer data-domain="acc-1-bilpayy.com/o1BOu6" src="https://api.publytics.net/js/script.manual.min.js"></script>
 	<script>
 	    window.publytics = window.publytics || function() { (window.publytics.q = window.publytics.q || []).push(arguments) };
 	    publytics('pageview');
