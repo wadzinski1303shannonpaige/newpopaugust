@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Click to Call</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .call-box {
+      background: white;
+      border-radius: 10px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 30px;
+    }
+
+    .call-button {
+      display: inline-block;
+      background-color: #28a745;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .call-button:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 480px) {
+      .call-button {
+        font-size: 1.2rem;
+        padding: 16px 30px;
+      }
+
+      .logo {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="call-box">
+      <img src="your-logo.png" alt="Company Logo" class="logo" />
+      <a href="tel:+1234567890" class="call-button">📞 Click to Call</a>
+    </div>
+  </div>
+</body>
+</html>
