@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Your Brand</title>
+  <style>
+    body {
+      background-color: #1b1d2c;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: #1b1d2c;
+      border-radius: 12px;
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      padding: 40px 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .oauth-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .oauth-icons img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background-color: white;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background-color: #0f111a;
+      color: white;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .remember-me input {
+      margin-right: 8px;
+    }
+
+    .btn {
+      width: 100%;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .create-account {
+      margin-top: 20px;
+      background: none;
+      border: 1px solid #1877f2;
+      color: #1877f2;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    a {
+      color: #888;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <img src="your-logo.png" alt="Your Logo" class="logo" />
+
+  <h2>Sign in to Your Account</h2>
+
+  <div class="oauth-icons">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox_one_logo.svg" alt="Xbox" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/PlayStation_logo.svg" alt="PlayStation" />
+  </div>
+
+  <p>or</p>
+
+  <input type="text" placeholder="Enter your phone or email" />
+  
+  <div class="remember-me">
+    <input type="checkbox" id="remember" checked />
+    <label for="remember">Remember me</label>
+  </div>
+
+  <button class="btn">Next</button>
+
+  <p><a href="#">Forgot your password, or need to create a new one?</a></p>
+
+  <button class="create-account">Create Account</button>
+</div>
+
+</body>
+</html>
