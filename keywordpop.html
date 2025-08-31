@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Verify to Watch</title>
+  <title>Video Gate with Math</title>
   <style>
     html, body {
       margin: 0;
@@ -21,22 +21,20 @@
       height: 100vh;
       object-fit: cover;
       z-index: -1;
-      display: none;
+      display: none; /* hidden until math verified */
     }
 
     #overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      color: white;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       z-index: 10;
+      color: white;
     }
 
     #verificationBox {
@@ -46,29 +44,28 @@
       text-align: center;
     }
 
-    #verificationBox input {
-      padding: 8px;
+    input {
       margin-top: 10px;
+      padding: 8px;
       font-size: 16px;
-      width: 100px;
       text-align: center;
+      width: 80px;
     }
 
-    #verificationBox button {
+    button {
       margin-top: 10px;
       padding: 8px 16px;
       font-size: 16px;
-      cursor: pointer;
-      background: #007bff;
-      color: white;
+      background-color: #007bff;
       border: none;
+      color: white;
       border-radius: 4px;
+      cursor: pointer;
     }
 
     #errorMsg {
+      margin-top: 10px;
       color: red;
-      margin-top: 8px;
-      font-size: 14px;
     }
   </style>
 </head>
@@ -94,21 +91,19 @@
     const num2 = Math.floor(Math.random() * 10) + 1;
     const correctAnswer = num1 + num2;
 
-    const questionText = document.getElementById('questionText');
-    const errorMsg = document.getElementById('errorMsg');
-    const video = document.getElementById('bgVideo');
-    const overlay = document.getElementById('overlay');
+    document.getElementById('questionText').textContent = `What is ${num1} + ${num2}?`;
 
-    questionText.textContent = `What is ${num1} + ${num2}?`;
+    const overlay = document.getElementById('overlay');
+    const video = document.getElementById('bgVideo');
+    const errorMsg = document.getElementById('errorMsg');
 
     function isDesktop() {
       return window.innerWidth >= 1024 && !/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
 
     function checkAnswer() {
-      const userAnswer = document.getElementById('userAnswer').value.trim();
-
-      if (parseInt(userAnswer) === correctAnswer) {
+      const userInput = document.getElementById('userAnswer').value.trim();
+      if (parseInt(userInput) === correctAnswer) {
         errorMsg.textContent = '';
         startVideo();
       } else {
@@ -118,29 +113,35 @@
 
     function startVideo() {
       if (!isDesktop()) {
-        alert("This content is available on desktop only.");
+        alert("This content is only available on desktop.");
         return;
       }
 
+      // Show video before trying to play
       video.style.display = 'block';
 
-      // Request fullscreen
-      const elem = document.documentElement;
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
+      // Try fullscreen first
+      const docElm = document.documentElement;
+      if (docElm.requestFullscreen) {
+        docElm.requestFullscreen();
+      } else if (docElm.webkitRequestFullscreen) {
+        docElm.webkitRequestFullscreen();
+      } else if (docElm.msRequestFullscreen) {
+        docElm.msRequestFullscreen();
       }
 
-      // Try to play the video and catch any errors
-      video.play().then(() => {
-        overlay.style.display = 'none';
-      }).catch(err => {
-        console.error("Video play failed:", err);
-        errorMsg.textContent = "Autoplay failed. Please try clicking again.";
-      });
+      // Wait a moment to ensure visibility, then play
+      setTimeout(() => {
+        video.play()
+          .then(() => {
+            overlay.style.display = 'none';
+            console.log("Video is playing.");
+          })
+          .catch((err) => {
+            errorMsg.textContent = "Video could not autoplay. Try clicking again.";
+            console.error("Playback failed:", err);
+          });
+      }, 100); // slight delay helps ensure video is ready
     }
   </script>
 
