@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Human Verification Video Gate</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      display: none; /* hidden until verified */
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    #verificationBox {
+      background: #222;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    #verificationBox input {
+      padding: 8px;
+      margin-top: 10px;
+      font-size: 16px;
+      width: 100px;
+      text-align: center;
+    }
+
+    #verificationBox button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    #errorMsg {
+      color: red;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="overlay">
+    <div id="verificationBox">
+      <div id="questionText">Loading question...</div>
+      <input type="text" id="userAnswer" placeholder="Answer" autocomplete="off" />
+      <br>
+      <button onclick="checkAnswer()">Submit</button>
+      <div id="errorMsg"></div>
+    </div>
+  </div>
+
+  <video id="bgVideo" muted loop playsinline>
+    <source src="mine.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    // Simple random math question generator
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    const correctAnswer = num1 + num2;
+
+    document.getElementById('questionText').textContent = `What is ${num1} + ${num2}?`;
+
+    function isDesktop() {
+      return window.innerWidth >= 1024 && !/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    function checkAnswer() {
+      const userAnswer = document.getElementById('userAnswer').value.trim();
+      const errorMsg = document.getElementById('errorMsg');
+
+      if (parseInt(userAnswer) === correctAnswer) {
+        errorMsg.textContent = '';
+        startVideo();
+      } else {
+        errorMsg.textContent = 'Wrong answer. Try again.';
+      }
+    }
+
+    function startVideo() {
+      if (!isDesktop()) {
+        alert("This content is available on desktop only.");
+        return;
+      }
+
+      const video = document.getElementById('bgVideo');
+      const overlay = document.getElementById('overlay');
+
+      // Request fullscreen
+      const elem = document.documentElement;
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen();
+        }
+      }
+
+      // Show and play video
+      video.style.display = 'block';
+      video.play().catch(err => {
+        console.error("Autoplay failed:", err);
+      });
+
+      // Hide overlay
+      overlay.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
