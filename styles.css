@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,130 +7,133 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0b2946;
-  color: white;
+  color: #fff;
   height: 100vh;
 }
-a {
-  color: #00aaff;
-  text-decoration: none;
-}
-button {
-  cursor: pointer;
-}
 
-/* Header */
-header {
-  background-color: #0b2946;
+/* Top Navigation Bar */
+.top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #1e3a5f;
+  padding: 20px 40px;
+  background-color: #0b2946;
 }
 .logo {
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: bold;
 }
-nav a {
-  margin-right: 2rem;
+.top-links a {
+  margin-right: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
 }
-nav .close-btn {
-  font-size: 1.2rem;
+.close-btn {
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Main Section */
+.main {
+  display: flex;
+  height: calc(100vh - 80px);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+/* Left Section (Join KellerShop) */
+.left-section {
+  max-width: 400px;
+}
+.left-section h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.left-section p {
+  font-size: 16px;
+  color: #d2dce9;
+  margin-bottom: 24px;
+}
+.join-button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #0b2946;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-/* Main Layout */
-.container {
-  display: flex;
-  height: calc(100vh - 70px);
-}
-.left-panel {
-  flex: 1;
-  background-color: #0b2946;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.left-panel h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-.left-panel p {
-  margin-bottom: 2rem;
-  color: #c0cbd8;
-}
-.join-btn {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background-color: white;
-  color: #0b2946;
-  border: none;
-  border-radius: 4px;
-}
-
-/* Right Panel - Login Form */
-.right-panel {
-  flex: 1;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* Login Box */
 .login-box {
+  background-color: #ffffff;
+  color: #000;
+  padding: 40px;
+  border-radius: 4px;
   width: 300px;
-  color: #333;
 }
 .login-box h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
+  font-size: 22px;
 }
 .login-box label {
   display: block;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
+  margin-bottom: 6px;
+  margin-top: 16px;
 }
 .login-box input[type="text"],
 .login-box input[type="password"] {
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.password-wrapper {
+.password-row {
+  display: flex;
+  align-items: center;
   position: relative;
 }
-.show-btn {
+.password-row .show-btn {
   position: absolute;
-  right: 0.5rem;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #006699;
-  font-size: 0.9rem;
+  color: #0071a9;
+  cursor: pointer;
 }
 
-.remember {
+.remember-row {
   display: flex;
   align-items: center;
-  margin: 1rem 0;
+  margin-top: 16px;
+  font-size: 14px;
 }
-.remember input {
-  margin-right: 0.5rem;
+.remember-row input {
+  margin-right: 10px;
 }
 
 .next-btn {
   width: 100%;
+  margin-top: 20px;
+  padding: 10px;
   background-color: #556b2f;
-  color: white;
-  padding: 0.75rem;
+  color: #fff;
   border: none;
-  font-size: 1rem;
+  font-size: 16px;
   border-radius: 4px;
+  cursor: pointer;
 }
+
 .help-link {
   display: block;
+  margin-top: 16px;
   text-align: center;
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 14px;
+  color: #0071a9;
+  text-decoration: none;
 }
