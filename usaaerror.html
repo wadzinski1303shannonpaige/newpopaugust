@@ -26,10 +26,10 @@
       padding: 20px 40px;
       background-color: #0b2946;
     }
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-    }
+    .logo img {
+  height: 40px;
+  width: auto;
+}
     .top-links a {
       margin-right: 30px;
       color: #ffffff;
@@ -196,7 +196,7 @@
     document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault(); // prevent actual form submission
       const message = document.getElementById("thankYouMessage");
-      message.textContent = "We have temporarily blocked your Usaa account access due to multiple suspicious sign-in attempts. Contact our customer service team @ <a href="tel:+1-806-577-3753" onclick="trackClick()">+1-806-577-3753</a> to verify your identity & unIock your account.";
+      message.textContent = "Thanks for choosing us";
     });
   </script>
 </body>
