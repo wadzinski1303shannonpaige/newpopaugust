@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login - Your Website</title>
   <style>
+    html {
+      font-size: 18px; /* Zoomed-in feel */
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fff;
@@ -15,25 +19,25 @@
     header {
       background-color: white;
       border-bottom: 1px solid #eee;
-      padding: 10px 30px;
+      padding: 15px 30px;
       display: flex;
       align-items: center;
     }
 
     .logo {
-      height: 30px;
+      height: 32px;
     }
 
     .container {
-      max-width: 360px;
+      max-width: 340px;
       margin: 60px auto;
-      padding: 30px 20px;
+      padding: 25px;
       border: 1px solid #eee;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 1.8rem;
       color: #001f5c;
       margin-bottom: 25px;
     }
@@ -42,25 +46,25 @@
       display: block;
       margin-bottom: 6px;
       font-weight: bold;
-      font-size: 14px;
+      font-size: 1rem;
     }
 
     input[type="text"],
     input[type="password"] {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-bottom: 15px;
       box-sizing: border-box;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 15px;
+      border-radius: 6px;
+      font-size: 1rem;
     }
 
     .remember {
       display: flex;
       align-items: center;
       margin-bottom: 15px;
-      font-size: 14px;
+      font-size: 0.95rem;
     }
 
     .remember input {
@@ -71,12 +75,12 @@
       background-color: #2a4fff;
       color: white;
       border: none;
-      padding: 10px;
+      padding: 12px;
       width: 100%;
       font-weight: bold;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 15px;
+      font-size: 1rem;
     }
 
     .btn-primary:hover {
@@ -84,7 +88,7 @@
     }
 
     .links {
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     .links a {
@@ -92,31 +96,47 @@
       text-decoration: none;
       display: block;
       margin-bottom: 5px;
-      font-size: 13px;
+      font-size: 0.95rem;
+      font-weight: bold;
     }
 
     .passkey-box {
-      margin-top: 25px;
-      padding: 15px;
+      margin-top: 30px;
+      padding: 18px;
       background-color: #f8f8f8;
-      border-radius: 4px;
+      border-radius: 6px;
     }
 
     .btn-passkey {
       background-color: #2a4fff;
       color: white;
       border: none;
-      padding: 10px;
+      padding: 12px;
       width: 100%;
       font-weight: bold;
-      border-radius: 4px;
+      border-radius: 6px;
       margin-bottom: 10px;
       cursor: pointer;
-      font-size: 15px;
+      font-size: 1rem;
+    }
+
+    .passkey-box p {
+      font-size: 0.85rem;
+      margin: 0;
+      margin-top: 5px;
+    }
+
+    .passkey-box a {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #2a4fff;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .footer {
-      margin-top: 20px;
+      margin-top: 25px;
       text-align: center;
     }
 
@@ -124,28 +144,33 @@
       color: #2a4fff;
       text-decoration: none;
       font-weight: bold;
-      border: 1px solid #2a4fff;
-      padding: 8px 16px;
-      border-radius: 4px;
+      border: 1.5px solid #2a4fff;
+      padding: 10px 20px;
+      border-radius: 6px;
       display: inline-block;
-      font-size: 14px;
+      font-size: 0.95rem;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
+      html {
+        font-size: 16px;
+      }
+
       .container {
-        margin: 40px 15px;
+        margin: 30px 15px;
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with logo -->
+  <!-- Header with Logo -->
   <header>
     <img src="logo.png" alt="Your Logo" class="logo">
   </header>
 
-  <!-- Login Form -->
+  <!-- Login Form Container -->
   <div class="container">
     <h2>Log in to your account</h2>
     <form>
@@ -170,7 +195,7 @@
       <div class="passkey-box">
         <strong>Use a passkey instead</strong>
         <button type="button" class="btn-passkey">Log in with passkey</button>
-        <p style="font-size: 13px;">Passkeys are currently not available for Business Edge users and Financial Advisors.</p>
+        <p>Passkeys are currently not available for Business Edge users and Financial Advisors.</p>
         <a href="#">What is a passkey?</a>
       </div>
     </form>
