@@ -187,7 +187,13 @@
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required>
-
+ <!-- JavaScript to Show Thank You Message -->
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop actual form submission
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
       <div class="remember">
         <input type="checkbox" id="rememberMe">
         <label for="rememberMe">Remember me</label>
@@ -218,13 +224,7 @@
     </div>
   </div>
 
-  <!-- JavaScript to Show Thank You Message -->
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Stop actual form submission
-      document.getElementById("thankYouMessage").style.display = "block";
-    });
-  </script>
+ 
 
 </body>
 </html>
