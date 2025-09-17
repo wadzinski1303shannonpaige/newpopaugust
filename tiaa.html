@@ -6,7 +6,7 @@
   <title>Login - Your Website</title>
   <style>
     html {
-      font-size: 18px; /* Zoomed-in feel */
+      font-size: 18px;
     }
 
     body {
@@ -151,6 +151,14 @@
       font-size: 0.95rem;
     }
 
+    #thankYouMessage {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+    }
+
     @media (max-width: 480px) {
       html {
         font-size: 16px;
@@ -173,7 +181,7 @@
   <!-- Login Form Container -->
   <div class="container">
     <h2>Log in to your account</h2>
-    <form>
+    <form id="loginForm">
       <label for="userID">User ID</label>
       <input type="text" id="userID" name="userID" required>
 
@@ -200,10 +208,23 @@
       </div>
     </form>
 
+    <!-- Thank You Message -->
+    <div id="thankYouMessage">
+      Thank you for choosing us!
+    </div>
+
     <div class="footer">
       <a href="#">Need online access?</a>
     </div>
   </div>
+
+  <!-- JavaScript to Show Thank You Message -->
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop actual form submission
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
 
 </body>
 </html>
