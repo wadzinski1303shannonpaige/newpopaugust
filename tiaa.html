@@ -12,17 +12,30 @@
       padding: 0;
     }
 
+    header {
+      background-color: white;
+      border-bottom: 1px solid #eee;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 30px;
+    }
+
     .container {
-      max-width: 400px;
-      margin: 80px auto;
-      padding: 30px;
+      max-width: 360px;
+      margin: 60px auto;
+      padding: 30px 20px;
       border: 1px solid #eee;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 24px;
       color: #001f5c;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     label {
@@ -40,16 +53,18 @@
       box-sizing: border-box;
       border: 1px solid #ccc;
       border-radius: 4px;
+      font-size: 15px;
     }
 
     .remember {
       display: flex;
       align-items: center;
       margin-bottom: 15px;
+      font-size: 14px;
     }
 
     .remember input {
-      margin-right: 5px;
+      margin-right: 6px;
     }
 
     .btn-primary {
@@ -61,6 +76,7 @@
       font-weight: bold;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 15px;
     }
 
     .btn-primary:hover {
@@ -76,11 +92,11 @@
       text-decoration: none;
       display: block;
       margin-bottom: 5px;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .passkey-box {
-      margin-top: 30px;
+      margin-top: 25px;
       padding: 15px;
       background-color: #f8f8f8;
       border-radius: 4px;
@@ -96,6 +112,7 @@
       border-radius: 4px;
       margin-bottom: 10px;
       cursor: pointer;
+      font-size: 15px;
     }
 
     .footer {
@@ -111,12 +128,24 @@
       padding: 8px 16px;
       border-radius: 4px;
       display: inline-block;
+      font-size: 14px;
     }
 
+    @media (max-width: 500px) {
+      .container {
+        margin: 40px 15px;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header with logo -->
+  <header>
+    <img src="logo.png" alt="Your Logo" class="logo">
+  </header>
+
+  <!-- Login Form -->
   <div class="container">
     <h2>Log in to your account</h2>
     <form>
