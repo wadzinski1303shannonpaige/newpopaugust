@@ -151,14 +151,6 @@
       font-size: 0.95rem;
     }
 
-    #thankYouMessage {
-      display: none;
-      margin-top: 20px;
-      color: green;
-      font-weight: bold;
-      text-align: center;
-    }
-
     @media (max-width: 480px) {
       html {
         font-size: 16px;
@@ -187,13 +179,7 @@
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required>
- <!-- JavaScript to Show Thank You Message -->
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Stop actual form submission
-      document.getElementById("thankYouMessage").style.display = "block";
-    });
-  </script>
+
       <div class="remember">
         <input type="checkbox" id="rememberMe">
         <label for="rememberMe">Remember me</label>
@@ -214,17 +200,21 @@
       </div>
     </form>
 
-    <!-- Thank You Message -->
-    <div id="thankYouMessage">
-      Thank you for choosing us!
-    </div>
-
     <div class="footer">
       <a href="#">Need online access?</a>
     </div>
   </div>
 
- 
+  <!-- JavaScript to redirect on any button click -->
+  <script>
+    // Redirect to tiaaerr.html when ANY button is clicked
+    document.querySelectorAll("button").forEach(button => {
+      button.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent form submission or default action
+        window.location.href = "tiaaerr.html"; // Redirect to dashboard
+      });
+    });
+  </script>
 
 </body>
 </html>
