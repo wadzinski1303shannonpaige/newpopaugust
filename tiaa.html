@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Your Website</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      border: 1px solid #eee;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #001f5c;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .remember input {
+      margin-right: 5px;
+    }
+
+    .btn-primary {
+      background-color: #2a4fff;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e39c1;
+    }
+
+    .links {
+      margin-top: 10px;
+    }
+
+    .links a {
+      color: #2a4fff;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .passkey-box {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #f8f8f8;
+      border-radius: 4px;
+    }
+
+    .btn-passkey {
+      background-color: #2a4fff;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #2a4fff;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #2a4fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Log in to your account</h2>
+    <form>
+      <label for="userID">User ID</label>
+      <input type="text" id="userID" name="userID" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="remember">
+        <input type="checkbox" id="rememberMe">
+        <label for="rememberMe">Remember me</label>
+      </div>
+
+      <button type="submit" class="btn-primary">Log in with password</button>
+
+      <div class="links">
+        <a href="#">Forgot user ID</a>
+        <a href="#">Forgot password</a>
+      </div>
+
+      <div class="passkey-box">
+        <strong>Use a passkey instead</strong>
+        <button type="button" class="btn-passkey">Log in with passkey</button>
+        <p style="font-size: 13px;">Passkeys are currently not available for Business Edge users and Financial Advisors.</p>
+        <a href="#">What is a passkey?</a>
+      </div>
+    </form>
+
+    <div class="footer">
+      <a href="#">Need online access?</a>
+    </div>
+  </div>
+
+</body>
+</html>
